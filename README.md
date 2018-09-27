@@ -76,13 +76,13 @@ Now let's send that info to Telegram:
 
 ```
     A PUSH HAS BEEN DONE!
-    ---------------------
+    -------------------------------------
 
     Project: {{5.respository.name}}
-    Author: {{5.headCommit.authorName}} ({{5.headCommit.authorUsername}})
+    Author: {{5.headCommit.authorName}} ({{5.pusherName}})
     Date: {{5.headCommit.timestamp}}
     Message: {{5.headCommit.message}}
-    ---------------------
+    -------------------------------------
 ```
 
 Where {{data}} indicates the card that **must be selected** from the side panel. Finally, click **OK**.
