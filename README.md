@@ -102,4 +102,4 @@ own *Chat ID* (here you'll paste your group's unique name in the specified forma
 
 ### How do I install DeSIGNAR in my computer?
 
-Really, dude?
+Really, dude? Ugh, that's one of the **easiest things ever**. You'll find info [here](https://github.com/R3mmurd/DeSiGNAR).
