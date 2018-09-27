@@ -36,7 +36,7 @@ It's **strongly recommended** for all of you to take this courses during the sem
 
 - https://www.youtube.com/watch?v=_vfCXMSLMAU&list=PLNPbxFpuCy0-6GIUmiHCvj0H0hNxstOie (METU CENG773)
 
-About books, besides the readings recommended in those courses, you will find them here:
+About books, besides of the readings recommended in those courses, you will find them here:
 
 http://webdelprofesor.ula.ve/ingenieria/alejandromujica/sitio/ayda/
 
@@ -58,12 +58,14 @@ It's only one account for repository so there won't be any other troubles.
 - Avoid all tutorials and go directly to the dashboard. 
 - Then, click on *Create a new scenario*.
 - Type and select Github/BitBucket **and** Telegram. (Both must be selected).
-- 
-Let's go with GitHub first:
 
-- Click in the big centered circle and select GitHub firstly.
-- Choose then *Watch push actions*.
-- It will require you a Webhook to relate your GitHub repository to Integromat. Type a name, and then configure it on GitHub. To realize this, just follow this [instructions](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-set-up-a-webhook-in-github).
+Let's go with GitHub/Bitbucker first:
+
+- Click in the big centered circle and select GitHub/Bitbucket firstly.
+- Choose then *Watch push actions*/*Watch pushes*.
+- It will require you a Webhook to relate your GitHub repository to Integromat. Type a name, and then configure it on GitHub. To realize this, just follow this [instructions.](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-set-up-a-webhook-in-github).
+- If you're using BitBucket, this step is far way simpler. Follow this [instructions](https://www.integromat.com/en/kb/pkg/bitbucket/index.html).
+
 
 Now let's send that info to Telegram:
 
@@ -72,7 +74,9 @@ Now let's send that info to Telegram:
 - Click again in the big circle and add a click, go to *Connection* and click on **Add**.
 - Input the name of your wish, and paste this token: **687866749:AAHpCIf5-fyF-3JRKk0ITrL5auLUrbp_q6Y**
 - Inside *Chat ID* paste: @aydab2018
-- Inside *Text* field, add **strictly** this format (if GitHub):
+- Inside *Text* field, add **strictly** this format:
+
+*If GitHub*
 
 ```
     A PUSH HAS BEEN DONE!
@@ -85,11 +89,25 @@ Now let's send that info to Telegram:
     -------------------------------------
 ```
 
+*If BitBucket*
+
+
+```
+    A PUSH HAS BEEN DONE!
+    -------------------------------------
+
+    Project: {{2.repository.name}}
+    Author: {{2.actorDisplayName}} ({{2.actorUsername}})
+    Date: {{2.new.targetDate}}
+    Message: {{2.new.targetMessage}}
+    -------------------------------------
+```
+
 Where {{data}} indicates the card that **must be selected** from the side panel. Finally, click **OK**.
 
 For testing, Click on **Run Once** and it will log *The request was accepted. Waiting for data.* if setting was successful. If everything's fine, when you make a push from your git folder to your repo, it will appear a Telegram notification indicating that the push was made correctly. If this wasn't the case, make sure you followed up every step indicated in this guide.
 
-Finally, turn on the scheduling option to activate your push notifications.
+Finally, turn on the scheduling option to activate your push notifications. **Don't forget to save your Scenario** (the icon is at the bottom of the screen).
 
 ### How do I make my own bot for my team?
 
