@@ -5,18 +5,23 @@
 Welcome to the advanced course of algorithms at ULA! Here
 you will find any aspect discussed during lectures and 
 practice sessions. This README has been written in English
-because you'll face this language almost every day of your 
-professional life. Let's be fit with it then as soon as posible.
+because you will face this language almost every day of your 
+professional life. Let's be fit with it then as soon as possible.
 
 ## Table of Contents
 
-1. [Recommendations](#recomendations)
-2. [Books and Videos](#books-and-videos)
-3. [Instructions](#instructions)
+1. [Description of the course](#description-of-the-course)
+2. [Recommendations to get good grades](#recomendations-to-get-good-grades)
+3. [Books and Videos](#books-and-videos)
+4. [Instructions](#instructions)
 
-## Recommendations
+## Description of the course
 
-This is a course where you'll need to be highly focused and
+This is the advanced course of programming at ULA. This course will allow you to develop a big variety of approaches during problem solving. You will study concepts such as dynamic programming, graph theory, applied discrete mathematics, flow networks, advanced data structures, and complexity. Those concepts are **critical knowledge** when you start your career as a professional.
+
+## Recommendations to get good grades
+
+This is a course where you will need to be highly focused and
 opened to learn new things. So here is a set of recommendations
 you should follow if you want to get the best grade and the highest
 quantity of knowledge:
@@ -49,7 +54,7 @@ Do you want to be the best programmer with the best salary? Be the best, **take 
 
 ### How do I configure my repository and relate it with the Telegram Channel?
 
-It's very simple. You'll first need a GitHub or BitBucket repository. I assume you've
+It's very simple. You will first need a GitHub or BitBucket repository. I assume you've
 git installed in your OS but if it's not the case, here you have some [instructions](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/).
 
 Now, go to [Integromat](https://www.integromat.com/) and create and account there.
@@ -73,7 +78,7 @@ Now let's send that info to Telegram:
 - Choose **Send a text message or a reply** option.
 - Click again in the big circle and add a click, go to *Connection* and click on **Add**.
 - Input the name of your wish, and paste this token: **687866749:AAHpCIf5-fyF-3JRKk0ITrL5auLUrbp_q6Y**
-- Inside *Chat ID* paste: @aydab2018
+- Inside *Chat ID* paste: **@aydab2018**
 - Inside *Text* field, add **strictly** this format:
 
 *If GitHub*
@@ -111,13 +116,13 @@ Finally, turn on the scheduling option to activate your push notifications. **Do
 
 ### How do I make my own bot for my team?
 
-- Create a Telegram bot from the BotFather.
+- Create a Telegram bot from the [BotFather](https://telegram.me/BotFather).
 - Keep the token generated when the creation is successful.
 - Add the recently created bot as Administrator to your Telegram group.
 - Follow the steps indicated above for Telegram but using your own token and your
-own *Chat ID* (here you'll paste your group's unique name in the specified format).
+own *Chat ID* (here you will paste your group's unique name in the specified format).
 - Here you're free to use your own commit format.
 
 ### How do I install DeSIGNAR in my computer?
 
-Really, dude? Ugh, that's one of the **easiest things ever**. You'll find info [here](https://github.com/R3mmurd/DeSiGNAR).
+Really, dude? Ugh, that's one of the **easiest things ever**. You will find info [here](https://github.com/R3mmurd/DeSiGNAR).
