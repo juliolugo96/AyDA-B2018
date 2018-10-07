@@ -6,7 +6,7 @@ Welcome to the advanced course of algorithms at ULA! Here
 you will find any aspect discussed during lectures and 
 practice sessions. This README has been written in English
 because you will face this language almost every day of your 
-professional life. Let's be fit with it then as soon as possible.
+professional life. Let's adapt as soon as possible.
 
 ## Table of Contents
 
@@ -17,14 +17,14 @@ professional life. Let's be fit with it then as soon as possible.
 
 ## Description of the course
 
-This is the advanced course of programming at ULA. This course will allow you to develop a big variety of approaches during problem solving. You will study concepts such as dynamic programming, graph theory, applied discrete mathematics, flow networks, advanced data structures, and complexity. Those concepts are **critical knowledge** when you start your career as a professional.
+This is the advanced course of programming at ULA. This course will allow you to develop a big variety of approaches during problem solving. You will study concepts such as dynamic programming, graph theory, applied discrete mathematics, flow networks, advanced data structures, and complexity. Those concepts are **critical knowledge** when you start your career as a professional. We will design huge projects and use vanguard programming tools. During practice sessions, we will solve competitive programming problems extracted from one of the [biggest online judges](https://www.spoj.com/) with the most active community on internet.
 
 ## Recommendations to get good grades
 
 This is a course where you will need to be highly focused and
 opened to learn new things. So here is a set of recommendations
 you should follow if you want to get the best grade and the highest
-quantity of knowledge:
+quantity and quality of knowledge:
 
 - Make all your readings BEFORE you reach to the lectures. The classes are for discussions.
 Don't be lost during lectures or sessions, don't waste your time, be smart.
@@ -64,12 +64,21 @@ It's only one account for repository so there won't be any other troubles.
 - Then, click on *Create a new scenario*.
 - Type and select Github/BitBucket **and** Telegram. (Both must be selected).
 
-Let's go with GitHub/Bitbucker first:
+Let's go with GitHub/Bitbucket first:
 
-- Click in the big centered circle and select GitHub/Bitbucket firstly.
+- Click on the question mark and select GitHub/Bitbucket firstly.
 - Choose then *Watch push actions*/*Watch pushes*.
-- It will require you a Webhook to relate your GitHub repository to Integromat. Type a name, and then configure it on GitHub. To realize this, just follow this [instructions.](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-set-up-a-webhook-in-github).
-- If you're using BitBucket, this step is far way simpler. Follow this [instructions](https://www.integromat.com/en/kb/pkg/bitbucket/index.html).
+- If you are using GitHub, it will ask you for a Webhook to relate your repository to Integromat. Click on *Add*, then *Save*, copy the address generated to your clipboard, and without closing your scenario, follow these steps in another tab:
+    - Sign in into your GitHub account, then select the related repository you own.
+    - Click on "Settings" tab.
+    - Then click on "Webhooks" on the left panel.
+    - Click on the "Add WebHook" Button.
+    - Paste the copied URL in the Payload URL form field.
+    - Select "application/json" as the content type.
+    - Leave the "Active" checkbox checked.
+    - Click on "Add webhook" to save the webhook.
+
+- If you're using BitBucket, this step is far way simpler. Follow these [instructions](https://www.integromat.com/en/kb/pkg/bitbucket/index.html).
 
 
 Now let's send that info to Telegram:
@@ -77,7 +86,7 @@ Now let's send that info to Telegram:
 - Right click on the canvas, and *Add a module*.
 - Choose **Send a text message or a reply** option.
 - Click again in the big circle and add a click, go to *Connection* and click on **Add**.
-- Input the name of your wish, and paste this token: **687866749:AAHpCIf5-fyF-3JRKk0ITrL5auLUrbp_q6Y**
+- Type the name of your wish, and paste this token: **687866749:AAHpCIf5-fyF-3JRKk0ITrL5auLUrbp_q6Y**
 - Inside *Chat ID* paste: **@aydab2018**
 - Inside *Text* field, add **strictly** this format:
 
@@ -91,6 +100,10 @@ Now let's send that info to Telegram:
     Author: {{5.headCommit.authorName}} ({{5.pusherName}})
     Date: {{5.headCommit.timestamp}}
     Message: {{5.headCommit.message}}
+    -------------------------------------
+    Modified files
+    -------------------------------------
+    {{1.headCommit.modified}}
     -------------------------------------
 ```
 
