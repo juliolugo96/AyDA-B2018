@@ -62,7 +62,7 @@ It's only one account for repository so there won't be any other troubles.
 
 - Avoid all tutorials and go directly to the dashboard. 
 - Then, click on *Create a new scenario*.
-- Type and select Github/BitBucket **and** Telegram. (Both must be selected).
+- Type and select Github/BitBucket **and** TelegramBot. (Both must be selected).
 
 Let's go with GitHub/Bitbucket first:
 
@@ -75,15 +75,15 @@ Let's go with GitHub/Bitbucket first:
     - Click on the "Add WebHook" Button.
     - Paste the copied URL in the Payload URL form field.
     - Select "application/json" as the content type.
-    - Leave the "Active" checkbox checked.
     - Click on "Add webhook" to save the webhook.
 
 - If you're using BitBucket, this step is far way simpler. Follow these [instructions](https://www.integromat.com/en/kb/pkg/bitbucket/index.html).
 
 
-Now let's send that info to Telegram:
+Now let's send that info to Telegram. Go back to your Integromat tab:
 
-- Right click on the canvas, and *Add a module*.
+- Right click on the scenario canvas, and *Add a module*.
+- Choose TelegramBot option.
 - Choose **Send a text message or a reply** option.
 - Click again in the big circle and add a click, go to *Connection* and click on **Add**.
 - Type the name of your wish, and paste this token: **687866749:AAHpCIf5-fyF-3JRKk0ITrL5auLUrbp_q6Y**
@@ -96,14 +96,14 @@ Now let's send that info to Telegram:
     A PUSH HAS BEEN DONE!
     -------------------------------------
 
-    Project: {{5.respository.name}}
-    Author: {{5.headCommit.authorName}} ({{5.pusherName}})
-    Date: {{5.headCommit.timestamp}}
-    Message: {{5.headCommit.message}}
+    Project: {{respository.name}}
+    Author: {{headCommit.authorName}} ({{pusherName}})
+    Date: {{headCommit.timestamp}}
+    Message: {{headCommit.message}}
     -------------------------------------
     Modified files
     -------------------------------------
-    {{1.headCommit.modified}}
+    {{headCommit.modified}}
     -------------------------------------
 ```
 
@@ -114,16 +114,16 @@ Now let's send that info to Telegram:
     A PUSH HAS BEEN DONE!
     -------------------------------------
 
-    Project: {{2.repository.name}}
-    Author: {{2.actorDisplayName}} ({{2.actorUsername}})
-    Date: {{2.new.targetDate}}
-    Message: {{2.new.targetMessage}}
+    Project: {{repository.name}}
+    Author: {{actorDisplayName}} ({{actorUsername}})
+    Date: {{new.targetDate}}
+    Message: {{new.targetMessage}}
     -------------------------------------
 ```
 
-Where {{data}} indicates the card that **must be selected** from the side panel. Finally, click **OK**.
+Where {{data}} indicates the card that **must be selected** from the side panel. Finally, click **OK**. **DO NOT COPY AND PASTE** or an error will be displayed when trying to connect. Finally, click on *OK* button.
 
-For testing, Click on **Run Once** and it will log *The request was accepted. Waiting for data.* if setting was successful. If everything's fine, when you make a push from your git folder to your repo, it will appear a Telegram notification indicating that the push was made correctly. If this wasn't the case, make sure you followed up every step indicated in this guide.
+For testing, Click on **Run Once** and it will log in the console: *The request was accepted. Waiting for data* if setting was successful. If everything's fine, when you make a push from your git folder to your repo, it will appear a Telegram notification indicating that the push was made correctly. If this wasn't the case, make sure you followed up every step indicated in this guide.
 
 Finally, turn on the scheduling option to activate your push notifications. **Don't forget to save your Scenario** (the icon is at the bottom of the screen).
 
