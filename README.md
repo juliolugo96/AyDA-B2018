@@ -54,13 +54,13 @@ Do you want to be the best programmer with the best salary? Be the best, **take 
 
 ### How do I configure my repository and relate it with the Telegram Channel?
 
-It's very simple. You will first need a GitHub or BitBucket repository. I assume you've
+It is very simple. You will first need a GitHub or BitBucket repository. I assume you've
 git installed in your OS but if it's not the case, here you have some [instructions](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/).
 
 Now, go to [Integromat](https://www.integromat.com/) and create and account there.
 It's only one account for repository so there won't be any other troubles.
 
-- Avoid all tutorials and go directly to the dashboard. 
+- Skip all tutorials and go directly to the dashboard. 
 - Then, click on *Create a new scenario*.
 - Type and select Github/BitBucket **and** TelegramBot. (Both must be selected).
 
@@ -93,32 +93,36 @@ Now let's send that info to Telegram. Go back to your Integromat tab:
 *If GitHub*
 
 ```
-    A PUSH HAS BEEN DONE!
-    -------------------------------------
-
-    Project: {{respository.name}}
-    Author: {{headCommit.authorName}} ({{pusherName}})
-    Date: {{headCommit.timestamp}}
-    Message: {{headCommit.message}}
-    -------------------------------------
-    Modified files
-    -------------------------------------
-    {{headCommit.modified}}
-    -------------------------------------
+A PUSH HAS BEEN DONE
+-----------------------------------------
+Project: {{1.respository.name}}
+Author: {{1.headCommit.authorName}} ({{1.pusherName}})
+Date: {{1.headCommit.timestamp}}
+Message: {{1.headCommit.message}}
+-----------------------------------------
+Added files
+{{1.headCommit.added}}
+-----------------------------------------
+Modified files
+{{1.headCommit.modified}}
+-----------------------------------------
+Removed files
+{{1.headCommit.removed}}
+-----------------------------------------
 ```
 
 *If BitBucket*
 
 
 ```
-    A PUSH HAS BEEN DONE!
-    -------------------------------------
+A PUSH HAS BEEN DONE!
+-------------------------------------
 
-    Project: {{repository.name}}
-    Author: {{actorDisplayName}} ({{actorUsername}})
-    Date: {{new.targetDate}}
-    Message: {{new.targetMessage}}
-    -------------------------------------
+Project: {{repository.name}}
+Author: {{actorDisplayName}} ({{actorUsername}})
+Date: {{new.targetDate}}
+Message: {{new.targetMessage}}
+-------------------------------------
 ```
 
 Where {{data}} indicates the card that **must be selected** from the side panel. Finally, click **OK**. **DO NOT COPY AND PASTE** or an error will be displayed when trying to connect. Finally, click on *OK* button.
