@@ -28,7 +28,6 @@ string scs(string a, string b, memory &m)
     }
 
     m[p] = ret_val;
-
     return ret_val;
 }
 
